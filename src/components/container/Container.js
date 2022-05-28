@@ -8,7 +8,6 @@ import TodayTransactions from './today-transactions';
 import WeeklyExpenses from './weekly-expenses';
 import TransactionsLastYear from './transactions-last-year';
 import { types } from '../../deviceHelper/deviceTypeController';
-import MobileNavBar from './mobile-navbar';
 
 const Container = () => {
     const type = useSelector(state => state.deviceType)
@@ -30,7 +29,6 @@ const Container = () => {
                     <WeeklyExpenses />
                 </Wrapper>
             )}
-            {isMobile && <MobileNavBar />}
         </StyledContainer>
     );
 }
