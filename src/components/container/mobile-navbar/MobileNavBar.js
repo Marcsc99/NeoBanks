@@ -1,8 +1,8 @@
 import React from "react";
-import { StyledMobileNavBar } from "../styled-components/StyledMobileNavBar";
-import graphIcon from "../../assets/img/graphIcon.png";
-import compassIcon from "../../assets/img/compass.png";
-import userIcon from "../../assets/img/userIcon.png";
+import { StyledMobileNavBar } from "../../styled-components/StyledMobileNavBar";
+import graphIcon from "../../../assets/img/graphIcon.png";
+import compassIcon from "../../../assets/img/compass.png";
+import userIcon from "../../../assets/img/userIcon.png";
 
 const MobileNavBar = () => {
     return (

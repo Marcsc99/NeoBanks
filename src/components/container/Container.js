@@ -8,13 +8,14 @@ import TodayTransactions from './today-transactions';
 import WeeklyExpenses from './weekly-expenses';
 import TransactionsLastYear from './transactions-last-year';
 import { types } from '../../deviceHelper/deviceTypeController';
+import MobileNavBar from './mobile-navbar';
 
 const Container = () => {
     const type = useSelector(state => state.deviceType)
     const isMobile = type === types.mobile;
     return (
         <StyledContainer isMobile={isMobile}>
-            <Wrapper col width={isMobile ? "100%" : "40%"} height={isMobile ? "70vh" : "80vh"}>
+            <Wrapper col width={isMobile ? "100%" : "40%"} height={isMobile ? "72vh" : "82vh"}>
                 <Wrapper justify="sb" height="auto">
                     <MonthTransactions />
                     <TodayTransactions />
@@ -25,8 +26,13 @@ const Container = () => {
                 </Wrapper>
             </Wrapper>
             {!isMobile && (
-                <Wrapper width="60%" height="80vh">
+                <Wrapper width="60%" height="82vh">
                     <WeeklyExpenses />
+                </Wrapper>
+            )}
+            {isMobile && (
+                <Wrapper height="5vh" width="100%" mb2 center>
+                    <MobileNavBar />
                 </Wrapper>
             )}
         </StyledContainer>
