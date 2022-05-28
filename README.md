@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# Como acceder a la aplicación
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La manera más fácil de acceder a la aplicación es a través de:
+[https://neobanks.netlify.app/](https://neobanks.netlify.app/)
+He subido la aplicación a través de netlify con GitHub Actions.
 
-## Available Scripts
+Si preferís descargar el código ahora os explico cómo.
 
-In the project directory, you can run:
+## Descargar la aplicación
+
+Para descargarla desde GitHub, hay dos maneras:
+
+### En zip
+
+Desde la misma pestanya del repositorio,en el botón verde que pone "Code", se despliegan unas opciones. Al darle en la opcion "Download ZIP" se nos descargará el proyecto.
+
+### Desde terminal
+
+Desde una terminal bash, usar el comando: \
+git clone [https://github.com/Marcsc99/NeoBanks.git](https://github.com/Marcsc99/NeoBanks.git) \
+Se os descargará el código en el sitio desde donde hayáis abierto la terminal.\
+
+## Arrancar el proyecto
+
+Ya en el directorio del proyecto, se puede usar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Arranca el proyecto en modo desarrollo\
+Acceder a [http://localhost:3000](http://localhost:3000) para verlo desde tu navegador.\
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Si haces cambios, al guardar se recargará la página.\
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Hace una build de la app y la guarda en la carpeta `build`.\
+Optimiza y minifica la build automáticamente para un mejor performance.\
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run lint`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para tener un código limpio y consistente en todos los componentes, he instalado y usado eslint.\
+Al ejecutar este comando te arregla los errores existentes que pueda manejar y te indica el resto. \
 
-### `npm run eject`
+## Porqué he decidio hacerlo únicamente con Reactjs
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+La razón principal es porque lo tengo mucho más a mano al utilizarlo diariamente. Después, ya que tiene que ser para móbil y para web, se que se puede hacer muy responsive para los dos simplemente con Reactjs, y no veía la necesidad de hacerlo diferente. Estoy muy contento con el resultado tanto en tamaño de pc como con el de móbil.\
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Librerias utilizadas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### styled-components
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para los estilos, he hecho uso de styled-components, que me permite una mayor modulación, al poder usarlos en diferentes sitios cambiando las características con props. \
 
-## Learn More
+### react-chartjs-2
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para las gráficas que había, me he lanzado a usar react-chartjs-2 por primera vez. Ha sido todo un aprendizaje y estoy contento con el resultado. \
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### redux
 
-### Code Splitting
+He usado redux para el control de información a través de la aplicación. En este caso no había nada que compartir, así que lo he usado para guardar el estado del tamaño de la pantalla para mejorar el responsive. Lo he mezclado con hooks de react para que sea más modular y quede un código más limpio. \
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### react-router-dom
 
-### Analyzing the Bundle Size
+Para estar preparado por si se tenían que hacer más pantallas, he usadp react-router-dom para controlar el flujo de la aplicación a través de rutas. \
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Architectura del proyecto
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+│   .eslintrc.js
+│   .gitignore
+│   package-lock.json
+│   package.json
+│   README.md
+│
+├───.github
+│   └───workflows
+│           main.yml
+│
+├───node_modules
+│
+├───public
+│       index.html
+│
+└───src
+    │   index.js
+    │
+    ├───assets
+    │   ├───img
+    │   │       arrow-up.png
+    │   │       compass.png
+    │   │       graphIcon.png
+    │   │       icon.png
+    │   │       logo-neobank.png
+    │   │       settings.png
+    │   │       userIcon.png
+    │   │
+    │   └───styles
+    │           style.css
+    │
+    ├───common
+    │   └───utils
+    │           updateDeviceType.js
+    │           windowSizes.js
+    │
+    ├───components
+    │   ├───app
+    │   │       App.js
+    │   │
+    │   ├───container
+    │   │   │   Container.js
+    │   │   │   index.js
+    │   │   │
+    │   │   ├───conversion
+    │   │   │       Conversion.js
+    │   │   │       index.js
+    │   │   │
+    │   │   ├───mobile-navbar
+    │   │   │       index.js
+    │   │   │       MobileNavBar.js
+    │   │   │
+    │   │   ├───month-transactions
+    │   │   │       index.js
+    │   │   │       MonthTransactions.js
+    │   │   │
+    │   │   ├───today-transactions
+    │   │   │       index.js
+    │   │   │       TodayTransactions.js
+    │   │   │
+    │   │   ├───transactions-last-year
+    │   │   │       index.js
+    │   │   │       TransactionsLastYear.js
+    │   │   │
+    │   │   └───weekly-expenses
+    │   │           index.js
+    │   │           WeeklyExpenses.js
+    │   │
+    │   ├───dash-text
+    │   │       DashText.js
+    │   │       index.js
+    │   │
+    │   ├───dashboard
+    │   │       Dashboard.js
+    │   │       index.js
+    │   │
+    │   ├───header
+    │   │       Header.js
+    │   │       index.js
+    │   │
+    │   └───styled-components
+    │           StyledBG.js
+    │           StyledContainer.js
+    │           StyledDashText.js
+    │           StyledHeader.js
+    │           StyledInfo.js
+    │           StyledItem.js
+    │           StyledLine.js
+    │           StyledMiniCircle.js
+    │           StyledMobileNavBar.js
+    │           StyledProgressCircle.js
+    │           Wrapper.js
+    │
+    └───deviceHelper
+            deviceTypeController.js
