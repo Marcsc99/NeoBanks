@@ -1,18 +1,18 @@
 # Como acceder a la aplicación
 
-La manera más fácil de acceder a la aplicación es a través de:
-[https://neobanks.netlify.app/](https://neobanks.netlify.app/)
-He subido la aplicación a través de netlify con GitHub Actions.
-
-Si preferís descargar el código ahora os explico cómo.
-
+La manera más fácil de acceder a la aplicación es a través de:\
+[https://neobanks.netlify.app/](https://neobanks.netlify.app/)\
+He subido la aplicación a través de netlify con GitHub Actions.\
+\
+Si preferís descargar el código ahora os explico cómo.\
+\
 ## Descargar la aplicación
 
-Para descargarla desde GitHub, hay dos maneras:
+Para descargarla desde GitHub, hay dos maneras:\
 
 ### En zip
 
-Desde la misma pestanya del repositorio,en el botón verde que pone "Code", se despliegan unas opciones. Al darle en la opcion "Download ZIP" se nos descargará el proyecto.
+Desde la misma pestanya del repositorio,en el botón verde que pone "Code", se despliegan unas opciones. Al darle en la opcion "Download ZIP" se nos descargará el proyecto.\
 
 ### Desde terminal
 
@@ -22,13 +22,13 @@ Se os descargará el código en el sitio desde donde hayáis abierto la terminal
 
 ## Arrancar el proyecto
 
-Ya en el directorio del proyecto, se puede usar:
+Ya en el directorio del proyecto, se puede usar:\
 
 ### `npm start`
 
 Arranca el proyecto en modo desarrollo\
 Acceder a [http://localhost:3000](http://localhost:3000) para verlo desde tu navegador.\
-
+\
 Si haces cambios, al guardar se recargará la página.\
 
 ### `npm run build`
@@ -65,98 +65,98 @@ Para estar preparado por si se tenían que hacer más pantallas, he usadp react-
 
 ## Architectura del proyecto
 
-│   .eslintrc.js
-│   .gitignore
-│   package-lock.json
-│   package.json
-│   README.md
-│
-├───.github
-│   └───workflows
-│           main.yml
-│
-├───node_modules
-│
-├───public
-│       index.html
-│
-└───src
-    │   index.js
-    │
-    ├───assets
-    │   ├───img
-    │   │       arrow-up.png
-    │   │       compass.png
-    │   │       graphIcon.png
-    │   │       icon.png
-    │   │       logo-neobank.png
-    │   │       settings.png
-    │   │       userIcon.png
-    │   │
-    │   └───styles
-    │           style.css
-    │
-    ├───common
-    │   └───utils
-    │           updateDeviceType.js
-    │           windowSizes.js
-    │
-    ├───components
-    │   ├───app
-    │   │       App.js
-    │   │
-    │   ├───container
-    │   │   │   Container.js
-    │   │   │   index.js
-    │   │   │
-    │   │   ├───conversion
-    │   │   │       Conversion.js
-    │   │   │       index.js
-    │   │   │
-    │   │   ├───mobile-navbar
-    │   │   │       index.js
-    │   │   │       MobileNavBar.js
-    │   │   │
-    │   │   ├───month-transactions
-    │   │   │       index.js
-    │   │   │       MonthTransactions.js
-    │   │   │
-    │   │   ├───today-transactions
-    │   │   │       index.js
-    │   │   │       TodayTransactions.js
-    │   │   │
-    │   │   ├───transactions-last-year
-    │   │   │       index.js
-    │   │   │       TransactionsLastYear.js
-    │   │   │
-    │   │   └───weekly-expenses
-    │   │           index.js
-    │   │           WeeklyExpenses.js
-    │   │
-    │   ├───dash-text
-    │   │       DashText.js
-    │   │       index.js
-    │   │
-    │   ├───dashboard
-    │   │       Dashboard.js
-    │   │       index.js
-    │   │
-    │   ├───header
-    │   │       Header.js
-    │   │       index.js
-    │   │
-    │   └───styled-components
-    │           StyledBG.js
-    │           StyledContainer.js
-    │           StyledDashText.js
-    │           StyledHeader.js
-    │           StyledInfo.js
-    │           StyledItem.js
-    │           StyledLine.js
-    │           StyledMiniCircle.js
-    │           StyledMobileNavBar.js
-    │           StyledProgressCircle.js
-    │           Wrapper.js
-    │
-    └───deviceHelper
-            deviceTypeController.js
+│   .eslintrc.js\
+│   .gitignore\
+│   package-lock.json\
+│   package.json\
+│   README.md\
+│\
+├───.github\
+│   └───workflows\
+│           main.yml\
+│\
+├───node_modules\
+│\
+├───public\
+│       index.html\
+│\
+└───src\
+    │   index.js\
+    │\
+    ├───assets\
+    │   ├───img\
+    │   │       arrow-up.png\
+    │   │       compass.png\
+    │   │       graphIcon.png\
+    │   │       icon.png\
+    │   │       logo-neobank.png\
+    │   │       settings.png\
+    │   │       userIcon.png\
+    │   │\
+    │   └───styles\
+    │           style.css\
+    │\
+    ├───common\
+    │   └───utils\
+    │           updateDeviceType.js\
+    │           windowSizes.js\
+    │\
+    ├───components\
+    │   ├───app\
+    │   │       App.js\
+    │   │\
+    │   ├───container\
+    │   │   │   Container.js\
+    │   │   │   index.js\
+    │   │   │\
+    │   │   ├───conversion\
+    │   │   │       Conversion.js\
+    │   │   │       index.js\
+    │   │   │\
+    │   │   ├───mobile-navbar\
+    │   │   │       index.js\
+    │   │   │       MobileNavBar.js\
+    │   │   │\
+    │   │   ├───month-transactions\
+    │   │   │       index.js\
+    │   │   │       MonthTransactions.js\
+    │   │   │\
+    │   │   ├───today-transactions\
+    │   │   │       index.js\
+    │   │   │       TodayTransactions.js\
+    │   │   │\
+    │   │   ├───transactions-last-year\
+    │   │   │       index.js\
+    │   │   │       TransactionsLastYear.js\
+    │   │   │\
+    │   │   └───weekly-expenses\
+    │   │           index.js\
+    │   │           WeeklyExpenses.js\
+    │   │\
+    │   ├───dash-text\
+    │   │       DashText.js\
+    │   │       index.js\
+    │   │\
+    │   ├───dashboard\
+    │   │       Dashboard.js\
+    │   │       index.js\
+    │   │\
+    │   ├───header\
+    │   │       Header.js\
+    │   │       index.js\
+    │   │\
+    │   └───styled-components\
+    │           StyledBG.js\
+    │           StyledContainer.js\
+    │           StyledDashText.js\
+    │           StyledHeader.js\
+    │           StyledInfo.js\
+    │           StyledItem.js\
+    │           StyledLine.js\
+    │           StyledMiniCircle.js\
+    │           StyledMobileNavBar.js\
+    │           StyledProgressCircle.js\
+    │           Wrapper.js\
+    │\
+    └───deviceHelper\
+            deviceTypeController.js\
