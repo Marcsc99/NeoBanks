@@ -14,7 +14,7 @@ const Container = () => {
     const isMobile = type === types.mobile;
     return (
         <StyledContainer isMobile={isMobile}>
-            <Wrapper col width={isMobile ? "100%" : "40%"} height="80vh">
+            <Wrapper col width={isMobile ? "100%" : "40%"} height={isMobile ? "70vh" : "80vh"}>
                 <Wrapper justify="sb" height="auto">
                     <MonthTransactions />
                     <TodayTransactions />
